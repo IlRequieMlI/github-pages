@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="LOGO EPS.png">
+  <title>Escuela tecnica N°10</title>
+  </head>
+
+<style>
+  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #1b1b32;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+
+  padding: 0 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+header h2 {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+header a {
+  color: #ffffff;
+  background-color: #2d2d4d;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+header a:hover {
+  background-color: #3e3e6e;
+}
+  
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.texto-portada {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-destacada {
+  margin-top: 45px;
+  position: relative;
+}
+
+.imagen-destacada {
+  margin-top: 45px;
+  position: relative;
+  height: 700px;
+  background-image: url('school.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.5s;
+}
+
+.img1 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.img1 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 50;
+      font-family: sans-serif;
+      background: #f0f0f0;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 120px auto 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      user-select: none;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .controls button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .controls button:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+.como-llegar {
+  text-align: center;
+  padding: 60px 20px;
+  color: #1b1b32;
+}
+
+.como-llegar h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.como-llegar p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+}
+
+.como-llegar .mapa {
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.que-es-la-eps h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.que-es-la-eps p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+}
+
+.actividades h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+footer {
+  width: 100%;
+  background-color: #1b1b32;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer h4 {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.color-picker {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: rgb(152, 201, 119);
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none; 
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 8px;
+  z-index: 1001;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.color-picker p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.color-picker button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+</style>
+
+<header>
+<div class="logo-container">
+  <img src="LOGO EPS.png" alt="Logo" class="logo" id="logo-btn" />
+  <div class="color-picker" id="colorPicker">
+    <p>FONDO</p>
+    <button style="background-color: #f5f7fa;" data-color="#f5f7fa"></button>
+    <button style="background-color: #fff9f0;" data-color="#fff9f0"></button>
+    <button style="background-color: #1e1e2f;" data-color="#1e1e2f"></button>
+    <button style="background-color: #fce4ec;" data-color="#fce4ec"></button>
+  </div>
+</div>
+
+  </div>
+  <h1>E.E.S.T.N°10 - E.P.S</h1>
+  <h2><a href="#mapa">&nbsp;¿COMO LLEGAR?&nbsp;</a></h2>
+  <h2><a href="#eps">&nbsp;¿QUE ES LA E.P.S?&nbsp;</a></h2>
+  <h2><a href="#act">&nbsp;ACTIVIDADES&nbsp;</a></h2>
+  <h2><a href="#red">&nbsp;REDES SOCIALES&nbsp;</a></h2>
+</header>
+
+
+<body>
+
+    <div class="imagen-destacada">
+</div>
+  <div class="img1">
+    <img src="LOGO TRIPTICO EPS EXPOTECNICA.png">
+    </div>
+
+<section class="como-llegar" id="mapa">
+  <h1>¿CÓMO LLEGAR?</h1>
+  <p>
+    La Escuela Técnica N°10 se ubica en Mariquita Thompson, España & Villa Madero,
+    Ciudad Autónoma de Buenos Aires.
+  </p>
+
+  <div class="mapa">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.58359708748!2d-58.49501382335785!3d-34.690457462085824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcceccbd1666db%3A0x84ebc84a49a80eba!2sEscuela%20de%20Educaci%C3%B3n%20Secundaria%20T%C3%A9cnica%20N%C2%B0%2010!5e0!3m2!1ses!2sar!4v1749105039226!5m2!1ses!2sar"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div id="eps"></div>
+  </div>
+</section>
+
+<section class="que-es-la-eps">
+  <h1>Educación Profesional Secundaria</h1>
+  <p>
+  La Educación Profesional Secundaria (EPS) es una trayectoria formativa destinada a jóvenes de entre 15 y 18 años que integra formación profesional y general. Participan 104 distritos y alcanza a más de 3.525 estudiantes de la Provincia.
+</p>
+
+<p>
+  La EPS se cursa en instituciones de educación técnico profesional y/o secundaria orientada que cuentan con los ámbitos y la tecnología necesarios para desarrollar la formación:
+</p>
+
+  <p>- Es una iniciativa que revincula a las y los jóvenes con la escuela secundaria y acompaña las trayectorias promoviendo una mejor inserción ocupacional.</p>
+  <p>- Otorga el título secundario con una especialización en diferentes sectores como construcciones, energía eléctrica, textil e indumentaria, producción agropecuaria y automotriz, gastronomía, programación, entre otros.</p>
+<div id="act"></div>
+<p>
+  En marzo 2023, la EPS comenzó a implementarse en 233 comisiones distribuidas en secundarias orientadas, escuelas técnicas y agrarias, centros de formación profesional y centros de educación agraria e institutos superiores de formación técnica.
+</p>
+
+</section>
+
+<section class="actividades">
+  <h1>Actividades que llevamos a cabo en el ambito escolar</h1>
+</section>
+  <div class="carousel">
+    <div class="slides">
+      <div class="slide"><img src="1.jpg" alt="Imagen 1" /></div>
+      <div class="slide"><img src="2.jpg" alt="Imagen 2" /></div>
+      <div class="slide"><img src="3.jpg" alt="Imagen 3" /></div>
+      <div class="slide"><img src="4.jpg" alt="Imagen 4" /></div>
+      <div class="slide"><img src="5.jpg" alt="Imagen 5" /></div>
+      <div class="slide"><img src="7.jpg" alt="Imagen 7" /></div>
+      <div class="slide"><img src="8.jpg" alt="Imagen 8" /></div>
+      <div class="slide"><img src="9.jpg" alt="Imagen 9" /></div>
+    </div>
+    <div class="controls">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+
+    <script>
+    const slides = document.querySelector(".slides");
+    const slideCount = document.querySelectorAll(".slide").length;
+    let index = 0;
+
+    document.getElementById("next").addEventListener("click", () => {
+      index = (index + 1) % slideCount;
+      updateCarousel();
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      index = (index - 1 + slideCount) % slideCount;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+
+<script>
+  const logoBtn = document.getElementById('logo-btn');
+  const colorPicker = document.getElementById('colorPicker');
+
+
+  logoBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    colorPicker.style.display = colorPicker.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+
+  document.addEventListener('click', (e) => {
+    if (!colorPicker.contains(e.target)) {
+      colorPicker.style.display = 'none';
+    }
+  });
+
+
+  document.querySelectorAll('.color-picker button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.body.style.backgroundColor = btn.dataset.color;
+    });
+  });
+</script>
+
+
+</body>
+    <footer>
+      <div id="red"></div>
+      <h2>REDES SOCIALES</h2>
+      <ul>
+        <h4><a href="https://www.instagram.com/eps.tecnica10?igsh=eWRyM2Q3aG10N3U2/"><img src="in.svg" width="30px" />   eps.tecnica10</a></h4>
+        <h4><img src="F.svg" width="25px">    epstecnica10lamatanza@gmail.com</h4>
+    </ul>
+  </footer>
+</html>
